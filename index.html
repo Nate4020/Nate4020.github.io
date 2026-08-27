@@ -1,9 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nate Barnes</title>
+<style>
+  :root {
+    --ink: #1f2421;
+    --paper: #f6f5f1;
+    --line: #d8d5cc;
+    --accent: #3a6b5c;
+    --accent-soft: #e4ede9;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Georgia", "Iowan Old Style", serif;
+    line-height: 1.6;
+  }
+
+  header {
+    padding: 5rem 1.5rem 3rem;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+
+  header .eyebrow {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  header h1 {
+    font-size: 2.75rem;
+    margin: 0 0 0.5rem;
+    font-weight: 400;
+  }
+
+  header p {
+    max-width: 32rem;
+    margin: 0 auto;
+    color: #555;
+    font-size: 1.05rem;
+  }
+
+  main {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  section h2 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .links a {
+    display: inline-block;
+    padding: 0.6rem 1.1rem;
+    background: var(--accent-soft);
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    transition: background 0.15s ease;
+  }
+
+  .links a:hover,
+  .links a:focus-visible {
+    background: var(--accent);
+    color: var(--paper);
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1.5rem 3rem;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.8rem;
+    color: #888;
+  }
+</style>
 </head>
 <body>
-    <h1>Hello, World! Welcome to my website.</h1>
+
+  <header>
+    <div class="eyebrow">Personal site</div>
+    <h1>Nate Barnes</h1>
+    <p>Welcome to my little corner of the internet. Replace this line with a short intro about who you are and what this page is for.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About</h2>
+      <p>
+        This is where you can write a few sentences about yourself &mdash;
+        what you do, what you're into, or what this site is for.
+        Nothing fancy, just a short and honest introduction.
+      </p>
+    </section>
+
+    <section>
+      <h2>Find me</h2>
+      <div class="links">
+        <a href="mailto:you@example.com">Email</a>
+        <a href="https://github.com/nab4020">GitHub</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Notes</h2>
+      <p>
+        Add anything else you'd like here &mdash; a project you're working on,
+        a favorite quote, a photo, or a link to something you made.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Nate Barnes &middot; nate.barnesclan.us
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
